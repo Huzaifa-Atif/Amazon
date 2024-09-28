@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .counts {
+        flex-wrap: wrap;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card{
+        width: 21vw;
+        padding: 15px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 0 10px -4px black;
+
+    }
+    .card img {
+        width: 100%;
+        height: 140px;
+        object-fit: contain;
+    }
+    .navbar{
+        background-color: black;
+        width: 100%;
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .image{
+        height: 90px;
+        margin-top: 4px;
+        object-fit: contain;
+    }
+    .ul{
+        display: flex;
+        margin-left: 260px;
+        color: white;
+        margin-top: -65px;
+        text-decoration: underline;
+        font-size: 26px;
+        gap: 70px;
+        /* justify-content: space-around; */
+    }
+    .image1{
+        width: 60px;
+        height: 60px;
+        margin-left: 1200px;
+        margin-top: -40px;
+    }
+    .cart{
+        margin-left: 180px;
+        width: 90px;
+        height: 30px;
+        background-color: orange;
+        color: white;
+        font-size: 14px;
+    }
+    .quantity{
+        color: white;
+        border-radius: 100%;
+        height: 25px;
+        width: 18px;
+        background-color: orange;
+        position: absolute;
+        top: 20px;
+        padding-left: 10px;
+        padding-top: 7px;
+    }
+    .cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+}
+
+.cart-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Width of modal */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+.cart-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Width of modal */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-height: 70vh; /* Set max height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+</style>
+<body>
+
+    <nav class="navbar">
+        <div>
+        <img class="image" src="./amazon.PNG" alt="">
+    </div>
+     <div class="ul">
+            <p>Home</p>
+            <p>Pricing</p>
+            <p>About</p>
+            <p>Tool</p>
+            <p>Testimoials</p>
+            <p>Contect Us</p>
+     </div>
+     <div>
+        <img class="image1" src="https://i.pinimg.com/474x/15/e0/67/15e067e33fbd9ed2f9a41b15d4941bf3.jpg" alt="">
+        <span class="quantity">0</span>
+     </div>
+    </nav>
+    <div class="counts">
+
+    </div>
+
+    <!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+    </div>
+  </div>
+  
+
+<script src="15th work dummy data index.js"></script>
+</body>
+</html>
